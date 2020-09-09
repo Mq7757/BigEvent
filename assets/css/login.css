@@ -22,3 +22,62 @@ body {
     height: 60px;
     background: url(/assets/images/login_title.png) no-repeat center;
 }
+
+.login-form,
+.reg-form {
+    padding: 0 30px;
+}
+
+blockquote,
+body,
+button,
+dd,
+div,
+form {
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: rgb(0, 0, 0, 0);
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+body {
+    line-height: 24px;
+    font: 14px helventica Neue, Helvetica, PingFang serif;
+}
+
+.layui-form-item {
+    position: relative;
+    margin-bottom: 15px;
+    clear: both;
+    *zoom: 1;
+}
+
+.layui-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.layui-input {
+    padding-left: 35px;
+}
+
+.layui-input,
+.layui-textarea {
+    display: block;
+    width: 100%;
+    padding-left: 10px;
+}
+
+.layui-input {
+    height: 38px;
+    line-height: 1.3;
+    border-width: 1px;
+    border-style: solid;
+    background-color: #fff;
+    border-radius: 2px;
+}

@@ -17,6 +17,24 @@
     <!-- 登录注册区域 -->
     <div class="loginAndRegBox">
         <div class="title-box"></div>
+        <!-- 登录的表单 -->
+        <div class="login_form layui-form">
+            <div class="layui-form-item">
+                <i class="layui-icon layui-icon-username">
+                    <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+                </i>
+            </div>
+            <div class="layui-form-item">
+                <i class="layui-icon layui-icon-password"></i>
+                <input type="password" name="password" required lay-verify="required | pwdLength" placeholder="请输入密码" autocomplete="off" class="layui-input layui-form-danger">
+            </div>
+            <div class="layui-form-item">
+                <button type="submit" layui-submit class="layui-btn layui-btn-normal layui-btn-fluid">登录</button>
+            </div>
+            <div class="layui-form-item reglink">
+                <a href="javascript:;" id="showReg">去注册账号</a>
+            </div>
+        </div>
     </div>
 </body>
 
