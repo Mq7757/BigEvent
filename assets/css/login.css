@@ -23,8 +23,17 @@ body {
     background: url(/assets/images/login_title.png) no-repeat center;
 }
 
+.reg-box {
+    display: none;
+}
+
 .layui-form {
     padding: 0 30px;
+    justify-content: flex-end;
+}
+
+.links {
+    display: flex;
     justify-content: flex-end;
 }
 
@@ -39,7 +48,7 @@ body {
 .layui-icon {
     position: absolute;
     left: 10px;
-    top: 12px;
+    top: 10px;
 }
 
 .layui-input {
