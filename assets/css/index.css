@@ -1,0 +1,16 @@
+.layui-footer {
+    text-align: center !important;
+    font-size: 12px;
+}
+
+.iconfont {
+    margin-right: 300;
+}
+
+.layui-body {
+    overflow: hidden;
+}
+
+a {
+    transition: none !important;
+}
