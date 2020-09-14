@@ -89,6 +89,7 @@ $(function() {
         var fd = new FormData($(this)[0])
             // 3. 将文章的发布状态，存到 fd 中
         fd.append('state', art_state)
+        fd.append('content', tinymce.activeEditor.getContent())
 
         // 将裁剪后的封面追加到`FormData`对象中
         // 为表单绑定 submit 提交事件
