@@ -39,27 +39,32 @@ $(function() {
             .cropper(options) // 重新初始化裁剪区域
     })
 
-    var dataURL = $image
-        .cropper('getCroppedCanvas', {
-            // 创建一个 Canvas 画布
-            width: 100,
-            height: 100
-        })
-        // 将 Canvas 画布上的内容，转化为 `base64` 格式的字符串
-        .toDataURL('image/png')
-        // 调用接口，把头像上传到服务器
-    $.ajax({
-        method: 'POST',
-        url: '/my/update/avatar',
-        data: {
-            avatar: dataURL
-        },
-        success: function(res) {
-            if (res.status !== 0) {
-                return layer.msg('更换头像失败！')
+    $('#btnUpload').on('click', function() {
+
+        var dataURL = $image
+            .cropper('getCroppedCanvas', {
+                // 创建一个 Canvas 画布
+                width: 100,
+                height: 100
+            })
+            // 将 Canvas 画布上的内容，转化为 `base64` 格式的字符串
+            .toDataURL('image/png')
+            // 调用接口，把头像上传到服务器
+        $.ajax({
+            method: 'POST',
+            url: '/my/update/avatar',
+            data: {
+                avatar: dataURL
+            },
+            success: function(res) {
+                if (res.status !== 0) {
+                    return layer.msg('更换头像失败！')
+                }
+                layer.msg('更换头像成功！')
+                window.parent.getUserInfo()
             }
-            layer.msg('更换头像成功！')
-            window.parent.getUserInfo()
-        }
+        })
+
     })
+
 })
